@@ -1,7 +1,6 @@
 var AppDispatcher = require('../dispatcher/AppDispatcher');
 
 function searchForVenue(inputtedVenueName) {
-
     var action = {
         type: 'receive_venue_name',
         venueName: inputtedVenueName
@@ -10,9 +9,7 @@ function searchForVenue(inputtedVenueName) {
     AppDispatcher.dispatch(action);
 }
 
-
 function receivedVenues(venues) {
-
     var action = {
         type: 'received_venues',
         venues: venues
@@ -27,7 +24,6 @@ function receivedVenueRecomendations(recommendations) {
         recommendations: recommendations
     };
 
-    console.log('** dispatch receivedVenueRecomendations ' + JSON.stringify(recommendations));
     AppDispatcher.dispatch(action);
 }
 

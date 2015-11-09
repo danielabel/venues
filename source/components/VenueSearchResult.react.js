@@ -25,10 +25,6 @@ var VenuesSearchResult = React.createClass({
         });
     },
 
-    handleClick: function (event) {
-        console.log('click' + event);
-    },
-
     render: function () {
         var venues = this.state.venues;
 
@@ -40,7 +36,6 @@ var VenuesSearchResult = React.createClass({
                         return (<VenueItem  key={venueItem.id} venue={venueItem}/>)
                     })
                 }
-
             </div>
         );
     }

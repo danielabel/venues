@@ -29,6 +29,7 @@ var VenuesSearchForm = React.createClass({
     render: function () {
         return (
             <div>
+                <h2></h2>
                 <form className="form-inline" onSubmit={this.handleSubmit}>
 
                     <div className="form-group">

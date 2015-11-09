@@ -28,14 +28,16 @@ var VenuesSearchResult = React.createClass({
     render: function () {
         var venues = this.state.venues;
 
-
         return (
             <div>
-                {
-                    venues.map(function (venueItem) {
-                        return (<VenueItem  key={venueItem.id} venue={venueItem}/>)
-                    })
-                }
+                <h2>Search Results</h2>
+                <div>
+                    {
+                        venues.map(function (venueItem) {
+                            return (<VenueItem key={venueItem.id} venue={venueItem}/>)
+                        })
+                    }
+                </div>
             </div>
         );
     }

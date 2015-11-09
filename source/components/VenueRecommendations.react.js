@@ -31,11 +31,14 @@ var VenueRecommendations = React.createClass({
 
         return (
             <div>
-                {
-                    recommendations.map(function (item) {
-                        return (<Recommendation  key={item.venue.id} recommendation={item.venue}/>)
-                    })
-                }
+                <h2>Recomendations</h2>
+                <div>
+                    {
+                        recommendations.map(function (item) {
+                            return (<Recommendation key={item.venue.id} recommendation={item.venue}/>)
+                        })
+                    }
+                </div>
             </div>
         );
     }

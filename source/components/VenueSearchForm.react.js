@@ -4,7 +4,7 @@ var VenueDataSource = require('../datasource/VenueDataSource');
 
 var VenuesSearchForm = React.createClass({
 
-    getInitialState: function() {
+    getInitialState: function () {
         return {
             venueName: ''
         };
@@ -28,20 +28,22 @@ var VenuesSearchForm = React.createClass({
 
     render: function () {
         return (
-            <form className="form-inline" onSubmit={this.handleSubmit}>
+            <div>
+                <form className="form-inline" onSubmit={this.handleSubmit}>
 
-                <div className="form-group">
-                    <input
-                        className="form-control"
-                        onChange={this.handleInputVenueChange}
-                        value={this.state.venueName}
-                        ref="venueName" />
-                </div>
+                    <div className="form-group">
+                        <input
+                            className="form-control"
+                            onChange={this.handleInputVenueChange}
+                            value={this.state.venueName}
+                            ref="venueName"/>
+                    </div>
 
-                <input type='submit' value='search' className='btn btn-default' onClick={this.handleFormSubmit}/>
+                    <input type='submit' value='search' className='btn btn-default' onClick={this.handleFormSubmit}/>
 
 
-            </form>
+                </form>
+            </div>
         );
     }
 });

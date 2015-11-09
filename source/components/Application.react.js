@@ -1,6 +1,7 @@
 var React = require('react');
 var VenueSearchForm = require('./VenueSearchForm.react');
 var VenueSearchResult = require('./VenueSearchResult.react');
+var VenueRecommendations = require('./VenueRecommendations.react');
 
 var Application = React.createClass({
 
@@ -13,6 +14,9 @@ var Application = React.createClass({
                     </div>
                     <div className="col-md-8">
                         <VenueSearchResult/>
+                    </div>
+                    <div className="col-md-8">
+                        <VenueRecommendations/>
                     </div>
                 </div>
             </div>

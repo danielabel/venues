@@ -21,7 +21,18 @@ function receivedVenues(venues) {
     AppDispatcher.dispatch(action);
 }
 
+function receivedVenueRecomendations(recommendations) {
+    var action = {
+        type: 'received_recommendations',
+        recommendations: recommendations
+    };
+
+    console.log('** dispatch receivedVenueRecomendations ' + JSON.stringify(recommendations));
+    AppDispatcher.dispatch(action);
+}
+
 module.exports = {
     searchForVenue: searchForVenue,
-    receivedVenues: receivedVenues
+    receivedVenues: receivedVenues,
+    receivedVenueRecomendations: receivedVenueRecomendations
 };

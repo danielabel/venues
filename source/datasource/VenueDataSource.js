@@ -35,6 +35,27 @@ function searchForVenue(inputtedVenueName) {
         });
 }
 
+function searchforVenueRecomendations(venue) {
+    var key = require('./../../config/secrets.json');
+
+    request.get('https://api.foursquare.com/v2/venues/explore')
+        .query({client_id: key.client_id})
+        .query({client_secret: key.client_secret})
+        .query({ll: venue.location.lat + "," + venue.location.lng})
+        .query({limit: '5'})
+        .query({v: '20130815'})
+        .set('Accept', 'application/json')
+        .end(function(err, res){
+            if (res.ok) {
+                venueActionCreators.receivedVenueRecomendations(Immutable.fromJS(res.body.response.groups[0].items));
+            } else {
+                console.log('Oh no! error ' + util.inspect(res, {showHidden: false, depth: 2}));
+            }
+        });
+
+}
+
 module.exports = {
-    searchForVenue: searchForVenue
+    searchForVenue: searchForVenue,
+    searchforVenueRecomendations: searchforVenueRecomendations
 };

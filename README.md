@@ -24,7 +24,8 @@ Run
 browse to ./build/index.html. For example on a mac `open ./build/index.html`
 
 ## Enhancements
-As a demo app their aren't any unit tests, if it were to be used further, automation testing would need to be added.
+* As a demo app their aren't any unit tests, if it were to be used further, automation testing would need to be added.
+* The Foursquare data format is used thorough the app, and its not perfect or clear for our uses. We should consider replacing it with a bespoke data format.
 
 ## Known issues
 

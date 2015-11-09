@@ -1,31 +1,41 @@
 var React = require('react');
-var VenueNameStore = require('../stores/VenueNameStore');
+var Immutable = require('immutable');
+var VenueStore = require('../stores/VenueStore');
 
 var VenuesSearchResult = React.createClass({
 
     getInitialState: function () {
         return {
-            venue: VenueNameStore.getVenueName()
+            venues: VenueStore.getVenues()
         }
     },
 
     componentDidMount: function () {
-        VenueNameStore.addChangeListener(this.onSearchVenue);
+        VenueStore.addChangeListener(this.onVenuesChange);
     },
 
     componentWillUnmount: function () {
-        VenueNameStore.removeChangeListener(this.onSearchVenue);
+        VenueStore.removeChangeListener(this.onVenuesChange);
     },
 
-    onSearchVenue: function () {
+    onVenuesChange: function () {
         this.setState({
-            venue: VenueNameStore.getVenueName()
+            venues: VenueStore.getVenues().toJS()
         });
     },
 
+
     render: function () {
-        return (<div>{this.state.venue}</div>);
+        var venues = this.state.venues;
+        return (<ul>
+            {
+                venues.map(function (venue) {
+                    return (<li key={venue.id}>{venue.name}</li>)
+                })
+            }
+        </ul>);
     }
+
 });
 
 module.exports = VenuesSearchResult;

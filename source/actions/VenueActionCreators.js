@@ -10,6 +10,18 @@ function searchForVenue(inputtedVenueName) {
     AppDispatcher.dispatch(action);
 }
 
+
+function receivedVenues(venues) {
+
+    var action = {
+        type: 'received_venues',
+        venues: venues
+    };
+
+    AppDispatcher.dispatch(action);
+}
+
 module.exports = {
-    searchForVenue: searchForVenue
+    searchForVenue: searchForVenue,
+    receivedVenues: receivedVenues
 };

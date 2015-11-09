@@ -1,5 +1,6 @@
 var React = require('react');
 var VenueActionCreators = require('../actions/VenueActionCreators');
+var VenueDataSource = require('../datasource/VenueDataSource');
 
 var VenuesSearchForm = React.createClass({
 
@@ -21,7 +22,7 @@ var VenuesSearchForm = React.createClass({
 
     handleFormSubmit: function (event) {
         event.preventDefault();
-        VenueActionCreators.searchForVenue(this.state.venueName);
+        VenueDataSource.searchForVenue(this.state.venueName);
     },
 
 

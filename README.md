@@ -8,9 +8,12 @@
 
 ## To build
 
+Create `config/secrets.json` from template provided
 
-    npm install
-    gulp
+Run
+
+* `npm install`
+* `gulp`
 
 
 browse to ./build/index.html. For example on a mac ` open ./build/index.html`

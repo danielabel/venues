@@ -5,13 +5,16 @@ var VenueDataSource = require('../datasource/VenueDataSource');
 
 var Recommendation = React.createClass({
 
-    render: function() {
+    render: function () {
 
         var recommendation = this.props.recommendation;
 
+        var url = 'https://foursquare.com/v/' + recommendation.id;
         return (
-            <p >
-                {recommendation.name}
+            <p>
+                <a href={url}  target='_blank'>
+                    {recommendation.name}
+                </a>
             </p>
         );
     }

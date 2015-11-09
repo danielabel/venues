@@ -1,5 +1,10 @@
 # venues
 
+Venues is a Javascript application written in React and Flux, and uses Browserify to get it all in a browser. 
+it uses FourSquare as a data source, which needs a little set up (see below). It's intended to be a demo application,
+and so has been scripted to be built and run locally. The technologies should allow deploying as a web app, but that 
+would involve quite a bit of fiddling about.  
+
 ## prerequisites
 
 * [Node/NPM](https://nodejs.org/en/)
@@ -17,6 +22,9 @@ Run
 
 
 browse to ./build/index.html. For example on a mac `open ./build/index.html`
+
+## Enhancements
+As a demo app their aren't any unit tests, if it were to be used further, automation testing would need to be added.
 
 ## Known issues
 

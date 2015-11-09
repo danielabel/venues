@@ -1,6 +1,7 @@
 var React = require('react');
 var Immutable = require('immutable');
 var VenueStore = require('../stores/VenueStore');
+var VenueItem = require('./VenueItem.react');
 
 var VenuesSearchResult = React.createClass({
 
@@ -24,18 +25,27 @@ var VenuesSearchResult = React.createClass({
         });
     },
 
+    handleClick: function (event) {
+        console.log('click' + event);
+    },
 
     render: function () {
         var venues = this.state.venues;
-        return (<ul>
-            {
-                venues.map(function (venue) {
-                    return (<li key={venue.id}>{venue.name}</li>)
-                })
-            }
-        </ul>);
+
+
+        return (
+            <div>
+                {
+                    venues.map(function (venueItem) {
+                        return (<VenueItem  key={venueItem.id} venue={venueItem}/>)
+                    })
+                }
+
+            </div>
+        );
     }
 
 });
+
 
 module.exports = VenuesSearchResult;

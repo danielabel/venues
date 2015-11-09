@@ -13,8 +13,9 @@ var VenueItem = React.createClass({
         var venue = this.props.venue;
         return (
             <a className="list-group-item" href="#" onClick={this.handleClick}>
-                {venue.name}
+                {venue.name}, {venue.location.city}
             </a>
+
         );
     }
 });

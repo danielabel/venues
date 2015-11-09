@@ -31,7 +31,7 @@ var VenueRecommendations = React.createClass({
 
         return (
             <div>
-                <h2>Recomendations</h2>
+                <h2>Nearby Recommendations</h2>
                 <div>
                     {
                         recommendations.map(function (item) {

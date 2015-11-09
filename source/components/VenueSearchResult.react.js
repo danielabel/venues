@@ -31,7 +31,7 @@ var VenuesSearchResult = React.createClass({
         return (
             <div>
                 <h2>Search Results</h2>
-                <div>
+                <div className="list-group">
                     {
                         venues.map(function (venueItem) {
                             return (<VenueItem key={venueItem.id} venue={venueItem}/>)

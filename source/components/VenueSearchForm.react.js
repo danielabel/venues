@@ -38,7 +38,8 @@ var VenuesSearchForm = React.createClass({
                         ref="venueName" />
                 </div>
 
-                <button type="button"  onClick={this.handleFormSubmit}>Search</button>
+                <input type='submit' value='search' onClick={this.handleFormSubmit}/>
+
 
             </form>
         );

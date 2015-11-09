@@ -12,10 +12,10 @@ var Application = React.createClass({
                     <div className="col-md-4 text-center">
                         <VenueSearchForm/>
                     </div>
-                    <div className="col-md-8">
+                    <div className="col-md-4">
                         <VenueSearchResult/>
                     </div>
-                    <div className="col-md-8">
+                    <div className="col-md-4">
                         <VenueRecommendations/>
                     </div>
                 </div>

@@ -1,0 +1,33 @@
+{
+  "name": "venues",
+  "version": "1.0.0",
+  "description": "venues test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielabel/venues.git"
+  },
+  "author": "Dan Abel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danielabel/venues/issues"
+  },
+  "homepage": "https://github.com/danielabel/venues#readme",
+  "dependencies": {
+    "flux": "^2.1.1",
+    "react": "^0.14.2",
+    "react-dom": "^0.14.2"
+  },
+  "devDependencies": {
+    "babel-preset-react": "^6.1.2",
+    "babelify": "^7.2.0",
+    "browserify": "^12.0.1",
+    "del": "^2.0.2",
+    "gulp": "^3.9.0",
+    "jest": "^0.1.40",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}

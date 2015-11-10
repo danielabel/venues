@@ -31,4 +31,4 @@ browse to ./build/index.html. For example on a mac `open ./build/index.html`
 
 * Using Immutable maps for the data structure from FrorSquare uses an experimental feature
 * Potential race conditions for slow networks and fast clicks
-* only supports javascript 6 - build is slow with Babel down compiling to JS5
+* only supports javascript 6 - build is slow with Babel down compiling to JS5. If you wish to run it in an older browser add `"presets": ["es2015"]` to .babelrc 
